@@ -11,6 +11,8 @@ class PlanoAfetivo:
     def __init__(self, root):
         self.root = root
         self.root.title("Mapa de Estilo Relacional")
+        self.root.state('zoomed')
+
 
         self.frame_principal = tk.Frame(root)
         self.frame_principal.pack(fill=tk.BOTH, expand=True)
@@ -31,13 +33,20 @@ class PlanoAfetivo:
         self.ax.set_ylim(-1, 1)
         self.ax.set_xticks([])
         self.ax.set_yticks([])
-        self.ax.set_xlabel("Gostar")
-        self.ax.set_ylabel("Importância")
+        # self.ax.set_xlabel("Gostar")
+        # self.ax.set_ylabel("Importância")
 
-        self.ax.text(0.5, 0.5, "Quero manter por perto", ha='center', va='center', fontsize=10, color='green')
+        self.ax.text(0.5, 0.5, "Relações que tenho zelo", ha='center', va='center', fontsize=10, color='green')
         self.ax.text(-0.5, 0.5, "Relações de validação", ha='center', va='center', fontsize=10, color='blue')
-        self.ax.text(-0.5, -0.5, "Quero me afastar", ha='center', va='center', fontsize=10, color='red')
+        self.ax.text(-0.5, -0.5, "Relações irrelevantes", ha='center', va='center', fontsize=10, color='red')
         self.ax.text(0.5, -0.5, "Relações de utilidade", ha='center', va='center', fontsize=10, color='orange')
+        # Rótulos claros nos extremos dos eixos
+        self.ax.text(1.02, 0, "Gosta muito →", ha='left', va='center', fontsize=11,  color='darkblue', transform=self.ax.transData)
+        self.ax.text(-1.02, 0, "← Gosta pouco", ha='right', va='center', fontsize=11, color='darkblue', transform=self.ax.transData)
+
+        self.ax.text(0, 1.02, "↑ Importa muito", ha='center', va='bottom', fontsize=11, color='darkred', transform=self.ax.transData)
+        self.ax.text(0, -1.02, "Importa pouco ↓", ha='center', va='top', fontsize=11, color='darkred', transform=self.ax.transData)
+
 
         self.pontos = []  # Guarda TODOS os pontos em TODOS os tempos
         self.pontos_artist = []  # Artistas atuais no plot
