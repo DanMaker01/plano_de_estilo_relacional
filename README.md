@@ -1,7 +1,7 @@
 
 --------------------------------------------------------------------------------
 
-Estilo de Relações Interpessoais, num Plano Liking/Caring (Gostar/Importar)
+Estilo de Relações Pessoais num Plano Liking/Caring (Gostar de / Importar-se com)
 
 (modelo simples para observar seus próprios relacionamentos)
 
@@ -23,6 +23,7 @@ Uso:
 --------------------------------------------------------------------------------
 
 Obs.:
+- É bom para analisar a causa eficiente, mas falta analise de causa formal, material e final
 - Possíveis bugs e/ou crashes
 - O arquivo pontos.json é um exemplo inicial (não é necessário)
 
