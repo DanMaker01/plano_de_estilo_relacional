@@ -35,11 +35,12 @@ class PlanoAfetivo:
         self.ax.set_yticks([])
         # self.ax.set_xlabel("Gostar")
         # self.ax.set_ylabel("Importância")
+        emoji_font = 'Segoe UI Emoji'  
 
-        self.ax.text(0.5, 0.5, "Relações que tenho zelo", ha='center', va='center', fontsize=10, color='green')
-        self.ax.text(-0.5, 0.5, "Relações de validação", ha='center', va='center', fontsize=10, color='blue')
-        self.ax.text(-0.5, -0.5, "Relações irrelevantes", ha='center', va='center', fontsize=10, color='red')
-        self.ax.text(0.5, -0.5, "Relações de utilidade", ha='center', va='center', fontsize=10, color='orange')
+        self.ax.text(0.5, 0.5, " ❤️ Mantenho por perto", ha='center', va='center', fontsize=10, color='green', fontname=emoji_font)
+        self.ax.text(-0.5, 0.5, "⚠️ Relações de validação, espectativa", ha='center', va='center', fontsize=10, color='blue', fontname=emoji_font)
+        self.ax.text(-0.5, -0.5, "❌ Me afasto", ha='center', va='center', fontsize=10, color='red', fontname=emoji_font)
+        self.ax.text(0.5, -0.5, "🤟 Relações de utilidade, oportunidade", ha='center', va='center', fontsize=10, color='orange', fontname=emoji_font)
         # Rótulos claros nos extremos dos eixos
         self.ax.text(1.02, 0, "Gosta muito →", ha='left', va='center', fontsize=11,  color='darkblue', transform=self.ax.transData)
         self.ax.text(-1.02, 0, "← Gosta pouco", ha='right', va='center', fontsize=11, color='darkblue', transform=self.ax.transData)
