@@ -24,4 +24,10 @@ Uso:
 
 Obs.:
 - Possíveis bugs e/ou crashes
-- O arquivo pontos.json é um exemplo inicial
+- O arquivo pontos.json é um exemplo inicial (não é necessário)
+
+--------------------------------------------------------------------------------
+
+Melhorias possíveis:
+- Interface com seleção de pontos (tanto na lista quanto no plano)
+- Mais opções de botões 
