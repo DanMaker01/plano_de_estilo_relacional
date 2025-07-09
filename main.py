@@ -56,8 +56,19 @@ class PlanoAfetivo:
         self.canvas.mpl_connect('button_release_event', self.on_release)
         self.canvas.mpl_connect('motion_notify_event', self.on_motion)
 
-        self.lista = tk.Listbox(self.frame_direito, width=30)
-        self.lista.pack(padx=5, pady=5, fill=tk.BOTH, expand=True)
+        # self.lista = tk.Listbox(self.frame_direito, width=30)
+        # self.lista.pack(padx=5, pady=5, fill=tk.BOTH, expand=True)
+
+        self.label_ordenado_gostar = tk.Label(self.frame_direito, text="Ordenado por Gostar (X ↓)")
+        self.label_ordenado_gostar.pack()
+        self.lista_gostar = tk.Listbox(self.frame_direito, width=30)
+        self.lista_gostar.pack(padx=5, pady=5, fill=tk.BOTH, expand=True)
+
+        self.label_ordenado_importancia = tk.Label(self.frame_direito, text="Ordenado por Importância (Y ↓)")
+        self.label_ordenado_importancia.pack()
+        self.lista_importancia = tk.Listbox(self.frame_direito, width=30)
+        self.lista_importancia.pack(padx=5, pady=5, fill=tk.BOTH, expand=True)
+
 
         self.botao_adicionar = tk.Button(self.frame_direito, text="Inserir ponto (tempo atual)", command=self.adicionar_ponto_manual)
         self.botao_adicionar.pack(pady=2)
@@ -88,6 +99,21 @@ class PlanoAfetivo:
         self.tempo_atual = int(val)
         self.atualizar_lista()
         self.desenhar_pontos()
+
+    def atualizar_listas_ordenadas(self):
+        pontos_atuais = [p for p in self.pontos if p.get('t') == self.tempo_atual]
+
+        # Ordenar por "gostar" (x)
+        ordenado_x = sorted(pontos_atuais, key=lambda p: p['x'], reverse=True)
+        self.lista_gostar.delete(0, tk.END)
+        for p in ordenado_x:
+            self.lista_gostar.insert(tk.END, f"{p['nome']} ({p['x']:.2f})")
+
+        # Ordenar por "importância" (y)
+        ordenado_y = sorted(pontos_atuais, key=lambda p: p['y'], reverse=True)
+        self.lista_importancia.delete(0, tk.END)
+        for p in ordenado_y:
+            self.lista_importancia.insert(tk.END, f"{p['nome']} ({p['y']:.2f})")
 
     def desenhar_pontos(self):
         for art in self.pontos_artist:
@@ -231,10 +257,13 @@ class PlanoAfetivo:
             self.desenhar_pontos()
 
     def atualizar_lista(self):
-        self.lista.delete(0, tk.END)
-        pontos_do_tempo = [p for p in self.pontos if isinstance(p, dict) and 't' in p and p['t'] == self.tempo_atual]
-        for p in pontos_do_tempo:
-            self.lista.insert(tk.END, f"{p['nome']} ({p['x']:.2f}, {p['y']:.2f})")
+        # # self.lista.delete(0, tk.END)
+        # pontos_do_tempo = [p for p in self.pontos if isinstance(p, dict) and 't' in p and p['t'] == self.tempo_atual]
+        # for p in pontos_do_tempo:
+        #     self.lista.insert(tk.END, f"{p['nome']} ({p['x']:.2f}, {p['y']:.2f})")
+
+        self.atualizar_listas_ordenadas()
+
 
     def fechar_programa(self):
         self.salvar_pontos()  # Garante que tudo esteja salvo
