@@ -1,15 +1,23 @@
 
 --------------------------------------------------------------------------------
 
-Estilo de Relações Pessoais num Plano Liking/Caring (Gostar de / Importar-se com)
+Estilo de Relações Pessoais, num Plano Liking/Caring (Gostar de / Importar-se com)
 
 (modelo simples para observar seus próprios relacionamentos)
 
 --------------------------------------------------------------------------------
 
-Baseado na pesquisa de Zick Rubin (1970) – Measurement of Romantic Love
+Baseado em:
 
+Zick Rubin (1970) – Measurement of Romantic Love
 https://users.ssc.wisc.edu/~jpiliavi/357/Measurementofromanticlove.pdf
+
+Naruhodo Podcast
+Naruhodo #433 - Existe amizade entre homens e mulheres? Parte 1 de 2 
+https://www.youtube.com/watch?v=EFVaBfGaowg
+Naruhodo #434 - Existe amizade entre homens e mulheres? Parte 2 de 2
+https://www.youtube.com/watch?v=H6D1yCni0rc
+
 
 --------------------------------------------------------------------------------
 
