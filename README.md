@@ -1,4 +1,5 @@
 Estilo de Relações Interpessoais, num Plano Liking/Caring (Gostar/Importar)
+(plano para observar seus relacionamentos)
 
 Baseado na pesquisa de Zick Rubin (1970) – Measurement of Romantic Love
 https://users.ssc.wisc.edu/~jpiliavi/357/Measurementofromanticlove.pdf
