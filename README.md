@@ -24,3 +24,4 @@ Uso:
 
 Obs.:
 - Possíveis bugs e/ou crashes
+- O arquivo pontos.json é um exemplo inicial
